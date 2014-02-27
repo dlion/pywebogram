@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-import argparse
 import os
 import sys
 from gi.repository import Gtk, WebKit
@@ -37,4 +36,3 @@ class pyWebogram:
 if __name__ == '__main__':
     webo = pyWebogram()
     webo.run()
-
