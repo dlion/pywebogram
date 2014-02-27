@@ -1,0 +1,3 @@
+[submodule "webogram"]
+	path = webogram
+	url = https://github.com/zhukov/webogram
