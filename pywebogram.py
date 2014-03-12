@@ -5,7 +5,7 @@ import sys
 from gi.repository import Gtk, WebKit
 
 class pyWebogram:
-
+    
     def __init__(self):
         self.view = WebKit.WebView()
 
@@ -18,15 +18,21 @@ class pyWebogram:
         self.window = Gtk.Window()
 
         self.window.set_title('pyWebogram')
+        self.window.set_resizable(False) # D-D-D-DROP THE RESIZE
         self.window.connect("delete-event", Gtk.main_quit)
         self.window.set_icon_from_file(os.path.dirname(os.path.realpath(__file__)) + '/webogram/app/favicon.ico')
+        
         self.window.add(self.view)
 
     def _js(self, code):
         self.view.execute_script(code)
 
     def run(self):
-        self.view.set_size_request(800, 600)
+        # responsive resolution. We cannot resize the window, but we can have a nice resolution for every monitor :)
+        h = int(self.window.get_screen().get_height())/1.2
+        w = int(self.window.get_screen().get_width())/1.4
+
+        self.view.set_size_request(w,h)
         self.window.set_position(Gtk.WindowPosition.CENTER)
         self.window.show_all()
         self.view.open(os.path.join('file://', os.path.dirname(os.path.realpath(__file__)), 'webogram/app/index.html'))
