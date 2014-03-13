@@ -8,6 +8,18 @@ I'm really tired to use it into my browser so I wrote a simple script using pyth
 ## Download
 Just type `git clone --recursive https://github.com/dlion/pywebogram` on your shell.
 
+## Dependencies
+
+Webogram requires:
+1. pywebkitgtk
+2. libwebkit3
+
+## Run
+
+```sh
+./pywebogram.py
+```
+
 ## Author
 
 * Domenico Luciani aka DLion
