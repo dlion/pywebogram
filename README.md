@@ -11,13 +11,13 @@ Just type `git clone --recursive https://github.com/dlion/pywebogram` on your sh
 ## Dependencies
 
 Webogram requires:
-1. pywebkitgtk
-2. libwebkit3
+*   pywebkitgtk
+*   libwebkit3
 
 ## Run
 
 ```sh
-./pywebogram.py
+./pywebogram.py &
 ```
 
 ## Author
