@@ -28,7 +28,7 @@ class pyWebogram:
         self.view.execute_script(code)
 
     def run(self):
-        self.view.set_size_request(800,400)
+        self.view.set_size_request(900,600)
         self.window.set_position(Gtk.WindowPosition.CENTER)
         self.window.show_all()
         self.view.open(os.path.join('file://', os.path.dirname(os.path.realpath(__file__)), 'webogram/app/index.html'))
